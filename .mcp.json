@@ -1,20 +1,73 @@
 {
   "name": "dockerfile-generator-ai-mcp",
-  "description": "MEOK AI Labs \u2014 dockerfile-generator-ai-mcp \u2014 Generate Dockerfiles for projects.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/dockerfile-generator-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "dockerfile-generator-ai-mcp \u2014 Generate Dockerfiles for projects.",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "DevOps",
-    "Containers"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_dockerfile",
+      "description": "Generate optimized Dockerfile for a project.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "framework": {
+            "type": "string"
+          },
+          "requirements": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language"
+        ]
+      }
+    },
+    {
+      "name": "generate_compose",
+      "description": "Generate docker-compose.yml from service descriptions.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "services"
+        ]
+      }
+    },
+    {
+      "name": "optimize_image",
+      "description": "Suggest optimizations for a Dockerfile (layer caching, multi-stage builds).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dockerfile_content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dockerfile_content"
+        ]
+      }
+    },
+    {
+      "name": "security_scan_hints",
+      "description": "Check Dockerfile for security best practices.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dockerfile_content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dockerfile_content"
+        ]
+      }
+    }
+  ]
 }

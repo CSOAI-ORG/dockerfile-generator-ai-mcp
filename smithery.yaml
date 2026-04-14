@@ -1,10 +1,35 @@
 name: dockerfile-generator-ai-mcp
-description: "MEOK AI Labs — dockerfile-generator-ai-mcp — Generate Dockerfiles for projects."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/dockerfile-generator-ai-mcp
-license: MIT
-categories: [DevOps, Containers]
-tags: [dockerfile, docker-build, container-image, docker-optimization]
-runtime: python
-entrypoint: server.py
+description: "dockerfile-generator-ai-mcp \u2014 Generate Dockerfiles for projects."
+version: 1.0.0
+tools:
+- name: generate_dockerfile
+  description: Generate optimized Dockerfile for a project.
+  parameters:
+  - name: language
+    type: string
+    required: true
+  - name: framework
+    type: string
+    required: false
+  - name: requirements
+    type: string
+    required: false
+- name: generate_compose
+  description: Generate docker-compose.yml from service descriptions.
+  parameters:
+  - name: services
+    type: string
+    required: true
+- name: optimize_image
+  description: Suggest optimizations for a Dockerfile (layer caching, multi-stage
+    builds).
+  parameters:
+  - name: dockerfile_content
+    type: string
+    required: true
+- name: security_scan_hints
+  description: Check Dockerfile for security best practices.
+  parameters:
+  - name: dockerfile_content
+    type: string
+    required: true
