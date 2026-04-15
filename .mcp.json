@@ -1,6 +1,6 @@
 {
   "name": "dockerfile-generator-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Generate Dockerfiles and docker-compose.yml from project descriptions.",
+  "description": "MCP server for dockerfile generator ai. Features generate dockerfile, generate compose, optimize image. From MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
