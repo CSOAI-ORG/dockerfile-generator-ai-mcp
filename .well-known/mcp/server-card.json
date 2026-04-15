@@ -1,0 +1,54 @@
+{
+  "name": "dockerfile-generator-ai",
+  "description": "Generate optimized Dockerfiles and docker-compose configurations. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/dockerfile-generator-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_dockerfile",
+      "description": "Generate an optimized Dockerfile for the specified language and framework."
+    },
+    {
+      "name": "optimize_layers",
+      "description": "Analyze a Dockerfile and suggest layer optimizations for faster builds and smaller images."
+    },
+    {
+      "name": "validate_dockerfile",
+      "description": "Validate a Dockerfile for syntax errors, security issues, and best practice violations."
+    },
+    {
+      "name": "suggest_base_image",
+      "description": "Suggest the best base Docker image for a given language and use case."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "DevOps & Infrastructure",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
