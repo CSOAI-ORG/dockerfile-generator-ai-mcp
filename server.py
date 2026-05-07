@@ -70,6 +70,15 @@ def generate_dockerfile(language: str, framework: str = "", port: int = 8000, en
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        language (str): The language to analyze or process.
+        framework (str): The framework to analyze or process.
+        port (int): The port to analyze or process.
+        entrypoint (str): The entrypoint to analyze or process.
+        multistage (bool): The multistage to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -140,6 +149,11 @@ def optimize_layers(dockerfile_content: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        dockerfile_content (str): The dockerfile content to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -249,6 +263,11 @@ def validate_dockerfile(dockerfile_content: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        dockerfile_content (str): The dockerfile content to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -354,6 +373,13 @@ def suggest_base_image(language: str, use_case: str = "web", minimize_size: bool
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        language (str): The language to analyze or process.
+        use_case (str): The use case to analyze or process.
+        minimize_size (bool): The minimize size to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
