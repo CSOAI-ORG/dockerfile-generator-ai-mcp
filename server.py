@@ -2,13 +2,21 @@
 """Generate optimized Dockerfiles and docker-compose configurations. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, re
 from datetime import datetime, timezone
 from collections import defaultdict
 from mcp.server.fastmcp import FastMCP
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
 
 FREE_DAILY_LIMIT = 30
 _usage = defaultdict(list)
@@ -96,7 +104,7 @@ def generate_dockerfile(language: str, framework: str = "", port: int = 8000, en
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -171,7 +179,7 @@ def optimize_layers(dockerfile_content: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -285,7 +293,7 @@ def validate_dockerfile(dockerfile_content: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -397,7 +405,7 @@ def suggest_base_image(language: str, use_case: str = "web", minimize_size: bool
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -435,5 +443,8 @@ def suggest_base_image(language: str, use_case: str = "web", minimize_size: bool
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
