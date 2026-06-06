@@ -1,0 +1,9 @@
+# dockerfile-generator-ai-mcp - Auto-trigger Rules
+
+When the user asks about dockerfile generator, use dockerfile-generator-ai-mcp tools: generate_dockerfile, optimize_layers, validate_dockerfile, suggest_base_image
+
+**MCP server for dockerfile generator ai mcp operations**
+
+Install: `pip install dockerfile-generator-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

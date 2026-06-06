@@ -1,0 +1,33 @@
+# dockerfile-generator-ai-mcp
+# **MCP server for dockerfile generator ai mcp operations**
+
+## Install
+```bash
+pip install dockerfile-generator-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `generate_dockerfile`
+Generate an optimized Dockerfile for the specified language and framework.
+
+### `optimize_layers`
+Analyze a Dockerfile and suggest layer optimizations for faster builds and smaller images.
+
+### `validate_dockerfile`
+Validate a Dockerfile for syntax errors, security issues, and best practice violations.
+
+### `suggest_base_image`
+Suggest the best base Docker image for a given language and use case.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

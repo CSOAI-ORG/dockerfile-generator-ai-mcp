@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate optimized Dockerfiles and docker-compose configurations. — MEOK AI Labs."""
+"""
+Generate optimized Dockerfiles and docker-compose configurations. — MEOK AI Labs."""
 
 import sys, os
 from auth_middleware import check_access

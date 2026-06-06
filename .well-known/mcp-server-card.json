@@ -1,0 +1,25 @@
+{
+  "name": "dockerfile-generator-ai-mcp",
+  "title": "Dockerfile Generator Ai Mcp",
+  "description": "MCP server for dockerfile generator ai. Features generate dockerfile, generate compose, optimize image. From MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_dockerfile"
+    },
+    {
+      "name": "optimize_layers"
+    },
+    {
+      "name": "validate_dockerfile"
+    },
+    {
+      "name": "suggest_base_image"
+    }
+  ]
+}
