@@ -1,0 +1,59 @@
+{
+  "name": "dockerfile-generator-ai-mcp",
+  "description": "Dockerfile Generator Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/dockerfile-generator-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_dockerfile",
+      "name": "Generate Dockerfile",
+      "description": "generate_dockerfile via dockerfile-generator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "optimize_layers",
+      "name": "Optimize Layers",
+      "description": "optimize_layers via dockerfile-generator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_dockerfile",
+      "name": "Validate Dockerfile",
+      "description": "validate_dockerfile via dockerfile-generator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_base_image",
+      "name": "Suggest Base Image",
+      "description": "suggest_base_image via dockerfile-generator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
