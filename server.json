@@ -4,9 +4,8 @@
   "version": "1.0.11",
   "description": "Dockerfile Generator Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/dockerfile-generator-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/dockerfile-generator-ai-mcp"
+    "source": "github"
   },
   "packages": [
     {
